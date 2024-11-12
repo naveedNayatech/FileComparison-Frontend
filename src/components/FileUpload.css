@@ -1,0 +1,107 @@
+.ant-upload-list-item-info .ant-upload-list-item-name {
+  color: white !important;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: flex-start;
+    padding-top: 40px; 
+    margin: 0; 
+  }
+  
+  
+  .card-container {
+    width: 800px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Soft shadow for the card */
+    border-radius: 8px;
+    background-color: #161618;  
+  }
+
+  .custom-label {
+    color: white;
+  }
+  
+
+  /* STtas cards */
+.card-title {
+  font-size: 18px;
+  color: white;
+}
+
+.card-body {
+  font-size: 42px;
+  color: white;
+}
+
+.completely-matched-card {
+  background-color: #4CAF50; /* Green */
+}
+
+.missing-card {
+  background-color: #FF5722; /* Orange */
+}
+
+.duplicate-card {
+  background-color: #FFC107; /* Amber */
+}
+
+.mistake-card {
+  background-color: #F44336; /* Red */
+}
+
+.billing-card {
+  background-color: dodgerblue
+}
+
+.tableSection {
+  padding-top: 50px;
+  margin: 0px 50px;
+  padding-bottom: 50px;
+  min-width: 1000px;
+}
+
+.row-display {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between
+}
+
+.tableSection h3 {
+  color: #FFF
+}
+
+/* tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tabs button:hover {
+  background-color: #ddd;
+}
+
+.tabs button.active {
+  background-color: #1890ff;
+  color: white;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
