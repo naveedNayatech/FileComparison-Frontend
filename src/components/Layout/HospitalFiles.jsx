@@ -100,9 +100,24 @@ const HospitalFiles = () => {
         key: 'chargesFound',
       },
       {
-        title: 'CPY Found in ECW',
+        title: 'CPT Found in ECW',
         dataIndex: 'foundCPTs',
         key: 'foundCPTs',
+      },
+      {
+        title: 'Claim No',
+        dataIndex: 'claimNo',
+        key: 'claimNo',
+      },
+      {
+        title: 'PMD Provider',
+        dataIndex: 'pmdProvider',
+        key: 'pmdProvider',
+      },
+      {
+        title: 'ECW Provider',
+        dataIndex: 'ecwProvider',
+        key: 'ecwProvider',
       },
       {
         title: 'Status',
@@ -141,6 +156,9 @@ const HospitalFiles = () => {
         ))}
     </span>
 ) : 'N/A',
+    claimNo: data?.claimNo,
+    pmdProvider: data?.midlevelProvider === null ? data?.pmdProvider : data?.midlevelProvider,
+    ecwProvider: data?.ecwProviders,
     status: data?.status,
   }));
 

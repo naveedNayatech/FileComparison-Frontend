@@ -12,6 +12,7 @@ const ExportReportToCSV = ({csvData, fileName, category}) => {
             'Patient Name':data?.name,
             'D.O.B':data?.dob,
             'Visit Date':data?.visitDate,
+            'Claim No': data?.claimNo,
             'Status':data?.status,
           }
     })
