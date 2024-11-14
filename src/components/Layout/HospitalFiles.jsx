@@ -157,8 +157,8 @@ const HospitalFiles = () => {
     </span>
 ) : 'N/A',
     claimNo: data?.claimNo,
-    pmdProvider: data?.midlevelProvider === null ? data?.pmdProvider : data?.midlevelProvider,
-    ecwProvider: data?.ecwProviders,
+    pmdProvider: data?.pmdProvider || 'N/A',
+    ecwProvider: data?.ecwProviders || 'N/A',
     status: data?.status,
   }));
 
