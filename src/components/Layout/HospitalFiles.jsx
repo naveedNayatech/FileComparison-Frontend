@@ -99,11 +99,11 @@ const HospitalFiles = () => {
         dataIndex: 'chargesFound',
         key: 'chargesFound',
       },
-      {
-        title: 'CPT Found in ECW',
-        dataIndex: 'foundCPTs',
-        key: 'foundCPTs',
-      },
+      // {
+      //   title: 'CPT Found in ECW',
+      //   dataIndex: 'foundCPTs',
+      //   key: 'foundCPTs',
+      // },
       {
         title: 'Claim No',
         dataIndex: 'claimNo',
@@ -146,16 +146,16 @@ const HospitalFiles = () => {
           ))}
       </span>
   ) : 'N/A',
-  foundCPTs: data?.foundCPTs && data?.foundCPTs.length > 0 ? (
-    <span>
-        {data?.foundCPTs.map((charge, index) => (
-            <span key={index}>
-                {charge}
-                {index < data?.foundCPTs.length - 1 && ', '} {/* Add comma except for the last item */}
-            </span>
-        ))}
-    </span>
-) : 'N/A',
+//   foundCPTs: data?.foundCPTs && data?.foundCPTs.length > 0 ? (
+//     <span>
+//         {data?.foundCPTs.map((charge, index) => (
+//             <span key={index}>
+//                 {charge}
+//                 {index < data?.foundCPTs.length - 1 && ', '} {/* Add comma except for the last item */}
+//             </span>
+//         ))}
+//     </span>
+// ) : 'N/A',
     claimNo: data?.claimNo,
     pmdProvider: data?.pmdProvider || 'N/A',
     ecwProvider: data?.ecwProviders || 'N/A',

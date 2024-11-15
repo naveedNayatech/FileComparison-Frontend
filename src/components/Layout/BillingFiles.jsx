@@ -55,8 +55,8 @@ const BillingFiles = () => {
       setResponseTime(endTime - startTime);
 
       if (response) {
-        setResultData(response?.data?.results?.[selectedCategory]);
-        setStats(response?.data?.results?.stats);
+        setResultData(response?.data?.[selectedCategory]);
+        setStats(response?.data?.stats);
         message.success('Files processed successfully');
       } else {
         message.error('Error processing files');
