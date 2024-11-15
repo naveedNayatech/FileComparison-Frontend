@@ -10,7 +10,7 @@ const ExportReportToCSV = ({csvData, fileName, category}) => {
         return {
             'Sr No':index + 1,
             'ID':data?.ID,
-            'Patient Name':data?.patientName,
+            'Patient Name':data?.PatientName,
             'D.O.B':data?.DOB,
             'Svc Date': data?.SvcDate,
             'Comment':data?.comment,
