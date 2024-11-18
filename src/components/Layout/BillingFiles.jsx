@@ -120,7 +120,7 @@ if (selectedCategory === "patientBilling") {
     key: index + 1,
     Sr: index + 1,
     ID: data?.ID,
-    patientName: data?.PatientName, 
+    patientName: data?.PatientName?.lastName +' '+ data?.PatientName?.firstName, 
     Svc: data?.SvcDate,
     DOB: data?.DOB,
     CPT: data?.CPTCode,
