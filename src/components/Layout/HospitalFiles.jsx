@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Upload, Button, Card, Form, message, Space, Row, Col, Table, Spin } from 'antd';
-import { TeamOutlined, UploadOutlined } from '@ant-design/icons';
+import { UploadOutlined } from '@ant-design/icons';
 import ExportHospitalReportToCSV from '../ExportHospitalReportToCSV';
 import { CheckCircleOutlined, ExclamationCircleOutlined, CopyOutlined, CloseCircleOutlined } from '@ant-design/icons';
 import moment from 'moment';
@@ -158,7 +158,7 @@ const HospitalFiles = () => {
 // ) : 'N/A',
     claimNo: data?.claimNo,
     pmdProvider: data?.pmdProvider || 'N/A',
-    ecwProvider: data?.ecwProviders || 'N/A',
+    ecwProvider: data?.ecwProvider || 'N/A',
     status: data?.status,
   }));
 
@@ -274,10 +274,24 @@ const HospitalFiles = () => {
                 <ExclamationCircleOutlined /> Mistake Records
               </span>
             }
-            className="duplicate-card"
+            className="mistake-card"
             style={{ textAlign: 'center', width: '250px' }}
           >
             <h1 className="card-body">{stats?.mistakesCount}</h1>
+          </Card>
+        </Col>
+        &nbsp;&nbsp;&nbsp;
+        <Col>
+          <Card
+            title={
+              <span className="card-title">
+                <ExclamationCircleOutlined /> Duplicate Records
+              </span>
+            }
+            className="duplicate-card"
+            style={{ textAlign: 'center', width: '250px' }}
+          >
+            <h1 className="card-body">{stats?.duplicatesCount}</h1>
           </Card>
         </Col>
       </Row>
@@ -310,6 +324,13 @@ const HospitalFiles = () => {
             onClick={() => setSelectedCategory('mistakeRecords')}
           >
             Mistakes Records
+          </button>
+
+          <button
+            className={selectedCategory === 'duplicateRecords' ? 'active' : ''}
+            onClick={() => setSelectedCategory('duplicateRecords')}
+          >
+            Duplicate Records
           </button>
         </div>
         <div> 
