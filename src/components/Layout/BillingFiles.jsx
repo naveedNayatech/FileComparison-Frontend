@@ -120,7 +120,7 @@ if (selectedCategory === "patientBilling") {
     key: index + 1,
     Sr: index + 1,
     ID: data?.ID,
-    patientName: data?.PatientName?.lastName +' '+ data?.PatientName?.firstName, 
+    patientName: !data?.PatientName?.lastName && !data?.PatientName?.firstName ? data?.PatientName : data?.PatientName?.lastName +' '+ data?.PatientName?.firstName, 
     Svc: data?.SvcDate,
     DOB: data?.DOB,
     CPT: data?.CPTCode,
@@ -131,7 +131,7 @@ if (selectedCategory === "patientBilling") {
   return (
     <>
     <div className="app-container">
-      <Card title="File Comparison" className="card-container" headStyle={{ color: 'white' }}>
+      <Card  title={<span style={{ color: 'white', padding: '5px' }}>EPIC & ECW File Comparison</span>} className="card-container">
         <Form layout="vertical" onFinish={handleSubmit}>
           <Row gutter={16} align="middle">
             <Col span={8}>
@@ -183,7 +183,7 @@ if (selectedCategory === "patientBilling") {
                   <Button type="primary" htmlType="submit" loading={loading}>
                     Submit
                   </Button>
-                  <Button htmlType="button" onClick={() => { setEPICFile(null); setEcwFile(null); setResultData([])}}>
+                  <Button htmlType="button" onClick={() => { setEPICFile(null); setEcwFile(null); setResultData([]); setSelectedCategory("completelyMatched")}}>
                     Reset
                   </Button>
                 </Space>

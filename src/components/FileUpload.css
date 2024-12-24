@@ -7,14 +7,14 @@
     flex-direction: column;  
     align-items: center;  
     justify-content: flex-start;
-    padding-top: 40px; 
+    padding-top: 10px; 
     margin: 0; 
   }
   
   
   .card-container {
     width: 800px;
-    padding: 20px;
+    padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Soft shadow for the card */
     border-radius: 8px;
     background-color: #161618;  
@@ -52,6 +52,21 @@
   background-color: #F44336; /* Red */
 }
 
+.completely-matched-card-text {
+  color: #4CAF50; /* Green */
+  text-transform: capitalize;
+}
+
+.missing-card-text {
+  text-transform: capitalize;
+  color: #FF5722; 
+}
+
+.mistake-card-text {
+  text-transform: capitalize;
+  color: #F44336;
+}
+
 .billing-card {
   background-color: dodgerblue
 }
@@ -87,6 +102,7 @@
   color: #333;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
 }
 
 .tabs button:hover {
